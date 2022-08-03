@@ -6,19 +6,25 @@ const Search = () => {
   const [text, setText] = useState("");
   const [alert, setAlert] = useState(false);
   const { fetchMetaData } = useContext(MetadataContext);
-
+  //If the input value changes to update
   const handleClick = (e) => {
     setText(e.target.value);
   };
+
+  //to set alert message if the input is empty
   const handleAlert = () => {
     setAlert(true);
     setTimeout(() => setAlert(false), 2000);
   };
+
+  //when user clicked the button
   const handleSubmit = (e) => {
     e.preventDefault();
+    //if the user entered nothing
     if (text == "") {
       handleAlert();
     } else {
+      //if everything goes call the fetchMetaData function
       setText("");
       fetchMetaData(text);
     }

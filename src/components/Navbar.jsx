@@ -18,7 +18,13 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a> CODE </a>
+            <a
+              href="https://github.com/salmankhan-prs/linkpreviewer"
+              target="_blank"
+            >
+              {" "}
+              CODE{" "}
+            </a>
           </li>
         </ul>
       </div>

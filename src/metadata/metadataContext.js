@@ -1,13 +1,13 @@
 import { createContext, useState } from "react";
-
+//create context
 export const MetadataContext = createContext();
-
+//creating provider to share state to every component
 export const MetadataProvider = ({ children }) => {
   const [metadata, setMetadata] = useState({});
   const [tagsInformation, setTagsInformation] = useState({});
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
+  //fetch metadata from backend api
   const fetchMetaData = async (text) => {
     setIsLoading(true);
     setMetadata({});
@@ -18,7 +18,9 @@ export const MetadataProvider = ({ children }) => {
     const metadataRes = await result.json();
 
     if (metadataRes.metadata) {
+      //set metadata
       setMetadata(metadataRes.metadata);
+      //set metaTags Information
       setTagsInformation(metadataRes.tagsInformation);
     } else {
       setError(true);
