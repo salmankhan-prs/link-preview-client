@@ -27,7 +27,7 @@ const Linkpreviewer = () => {
           {/*CODE TO SHOW CARD*/}
           <div className="text-slate-100">
             <a href={`http://${hostname}`} target="_blank">
-              <div class=" mx-auto card  bg-base-300 shadow-xl mb-2 shadow-gray-600  w-2/6  ">
+              <div class=" md:mx-auto  lg:mx-auto card w-5/6 xs: bg-base-300 shadow-xl mb-2 shadow-gray-600  lg:w-2/6  md:w-2/6 mx-auto ">
                 <figure>
                   {/* check image is or not if not place default image */}
                   <img
