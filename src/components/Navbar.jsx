@@ -16,16 +16,6 @@ const Navbar = () => {
               BACKEND API
             </a>
           </li>
-
-          <li>
-            <a
-              href="https://github.com/salmankhan-prs/linkpreviewer"
-              target="_blank"
-            >
-              {" "}
-              CODE{" "}
-            </a>
-          </li>
         </ul>
       </div>
     </div>
