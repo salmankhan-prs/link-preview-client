@@ -13,7 +13,7 @@ export const MetadataProvider = ({ children }) => {
     setMetadata({});
     setError(false);
     const result = await fetch(
-      `https://metatags-generator-backend.herokuapp.com/api/v1/meta?url=${text}`
+      `https://meta-tags-genrator-backend-production.up.railway.app/api/v1/meta?url=${text}`
     );
     const metadataRes = await result.json();
 
